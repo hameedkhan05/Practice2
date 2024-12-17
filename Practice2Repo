@@ -1,0 +1,36 @@
+def get_info():
+"""
+Getting information on the number of credits.
+Input: int - credit hours.
+Output: int - credit hours
+"""
+    credits = int(input("Enter the number of credits: "))
+    return credits
+
+def calc_tuition(credits):
+
+"""
+Calculating tuition for semester based on credit hours.
+Input: int - credit hours
+Output: float - tuition amount based on credit hours
+"""
+    if credits >= 12:
+        return 20000
+    else:
+        return 1200 + 1700 * credits
+
+def display_result(tuition):
+"""
+Display calculated tuition.
+Input: float -Tuition Amount
+Output: float - Total tuition amount
+"""
+    print(f"The tuition for the semester is: ${tuition}")
+
+def main_calcCost():
+
+    credits = get_info()
+    tuition = calc_tuition(credits)
+    display_result(tuition)
+
+main_calcCost()
